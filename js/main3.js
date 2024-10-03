@@ -192,8 +192,29 @@ function addText5(prefix, val) {
   chip_text_mesh.position.z = 0.1;
   scene.add(chip_text_mesh);
 }
+function addText6(prefix, val) {
+  var chip_text_mesh = getTextTexture(prefix, val, 0, 0);
+  if (prefix == "Player") {
+    chip_text_mesh.position.x = -1.1;
+    chip_text_mesh.position.y = 1.95;
+    chip_text_mesh.position.z = -0.4;
+  } else if (prefix == "Computer") {
+    chip_text_mesh.position.x = 1.11;
+    chip_text_mesh.position.y = 1.95;
+    chip_text_mesh.position.z = -0.4;
+  } else if (prefix == "Vs") {
+    chip_text_mesh.position.x = 0;
+    chip_text_mesh.position.y = 2.9;
+    chip_text_mesh.position.z = -0.4;
+  }
+
+  scene.add(chip_text_mesh);
+}
 function RestartButton() {
   addText5("Replay", "");
+  addText6("Player", "");
+  addText6("Computer", "");
+  addText6("Vs", "");
   // Create a 3D button (cube)
   const buttonGeometry = new THREE.BoxGeometry(1, 0.5, 0.1);
   const buttonMaterial = new THREE.MeshBasicMaterial({ color: 0x28a745 });
