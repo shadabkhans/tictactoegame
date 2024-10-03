@@ -1,4 +1,7 @@
-import * as THREE from "three";
+//import * as THREE from "three";
+//import * as THREE from "https://cdn.skypack.dev/three";
+import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
+
 //import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 /* import { LineSegments2 } from "../lines/LineSegments2.js";
